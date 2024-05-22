@@ -1,4 +1,5 @@
-![Uploading Challenges.gif…]()
+![Screenshot_7](https://github.com/aristobulo99/challenges/assets/64171570/b6042c48-b08c-4a1e-a00d-17ae86a177f1)
+
 
 # Challenges
 
