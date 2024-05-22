@@ -1,0 +1,13 @@
+<section class="w-full bg-teal-200 px-2 " *ngIf="map.length > 0">
+  <div class="w-full flex flex-row justify-center pt-3">
+    <h1 mat-dialog-title class="text-lg text-teal-800 font-sans">{{map[0].altSpellings[1]}}</h1>
+  </div>
+  <div mat-dialog-content>
+    <div class="w-full flex justify-center">
+      <img [src]="map[0].flags.svg" alt="flags" class="w-[17.125rem ] h-[9.875rem]">
+    </div>
+  </div>
+  <div class="w-full flex justify-center pt-4">
+    <h2 class="text-center text-sm text-emerald-950 font-sans">Representa el {{percentageCountryArea}}% de la superficie total del mundo.</h2>
+  </div>
+</section>

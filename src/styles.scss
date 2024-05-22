@@ -2,9 +2,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import "~leaflet/dist/leaflet.css";
 
 
 .simple-linear {
   background: linear-gradient(#10b981, #3b82f6);
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
