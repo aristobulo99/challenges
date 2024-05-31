@@ -1,0 +1,22 @@
+<section class="w-full h-full flex justify-center items-center">
+  <section class="w-[38.4rem] min-h-[50%] h-auto flex flex-col bg-white rounded-xl py-[1.875rem] px-[0.938rem] gap-3">
+
+    <div class="w-full h-auto flex flex-row items-center gap-4">
+      <app-input class="w-[30%]" [type]="'number'" [label]="'Numero'" [control]="numberForm.controls['valueNumber'] | formControl"></app-input>
+
+      <app-button [name]="'Agregar'" (eventClick)="addButton()"></app-button>
+    </div>
+
+    <div class="w-full px-4 flex flex-col justify-center" *ngIf="listSearchNumber[0].class">
+      <h1 class="text-center text-base text-teal-800 font-sans">En el número {{numberValue}} caben</h1>
+      <div class="w-full flex flex-row justify-center flex-wrap gap-9">
+        <div class="w-[7rem] h-[9rem] flex flex-col justify-center items-center bg-slate-200 rounded-xl border-4 border-[#10b981]"
+             *ngFor="let item of listSearchNumber">
+          <p class="text-center text-5xl text-teal-800 font-sans !mb-0">{{item.class?.calculateExistingAmount()}}</p>
+          <p class="text-center text-base text-teal-800 font-sans !mb-0">{{item.class ? (item.class.calculateExistingAmount() > 1 ? item.name+'s' : item.name): ''}}</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</section>
