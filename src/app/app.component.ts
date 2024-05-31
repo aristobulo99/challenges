@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoadingService } from './core/services/loading/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'challenges';
+
+  constructor(
+    private loadingService: LoadingService
+  ){}
+
+  get activeLoading(){
+    return this.loadingService.activeLoading;
+  }
 }

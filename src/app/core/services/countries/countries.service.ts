@@ -16,7 +16,7 @@ export class CountriesService {
   async getCountriesByLatLng(lat: number, lng: number): Promise<Countries[]>{
     const resul =  await this.getCountryFromCoordinates(lat, lng);
     const countries: Countries[] = [];
-    const url = `x/alpha/${resul.address.country_code.toLowerCase()}`;
+    const url = `https://restcountries.com/v3.1/alpha/${resul.address.country_code.toLowerCase()}`;
     const resp = await  lastValueFrom(
       this.http.get<Countries[]>(url)
     );
