@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { NgxLoadingModule } from "ngx-loading";
 
 
 @NgModule({
@@ -19,7 +20,10 @@ import { CommonModule } from '@angular/common';
     SharedModule,
     HttpClientModule,
     MatDialogModule,
-    CommonModule
+    CommonModule,
+    NgxLoadingModule.forRoot({
+      animationType: 'none'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

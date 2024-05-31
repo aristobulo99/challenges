@@ -1,3 +1,7 @@
 <div class="w-[100%] h-[100vh] simple-linear">
   <router-outlet></router-outlet>
+  <ngx-loading [show]="activeLoading" [config]="{backdropBorderRadius: '3px'}" [template]="loading"></ngx-loading>
 </div>
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
